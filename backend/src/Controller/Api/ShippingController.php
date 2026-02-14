@@ -20,7 +20,7 @@ final class ShippingController extends AbstractController
     public function index(
         CarrierRepository $carrierRepository,
     ): JsonResponse {
-        $carriers = $carrierRepository->findAll();
+        $carriers = $carrierRepository->findAllActive();
 
         return $this->json([
             'list' => $carriers,
