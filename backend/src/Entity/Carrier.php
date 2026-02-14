@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Services\Shipping\Repository\CarrierRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Groups;
 
 #[ORM\Entity(repositoryClass: CarrierRepository::class)]
 class Carrier
@@ -14,9 +15,11 @@ class Carrier
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['carrier:list'])]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['carrier:list'])]
     private ?string $slug = null;
 
     #[ORM\Column]

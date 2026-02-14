@@ -113,7 +113,7 @@ export default {
         async fetchCarriers() {
             try {
                 let carriersResponse = await axios.get(this.apiShippingUrl + '/carriers');
-                let carriers = carriersResponse.data?.list;
+                let carriers = carriersResponse.data;
 
                 if (carriers) {
                     for (const value of Object.values(carriers)) {
