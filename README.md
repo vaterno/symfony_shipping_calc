@@ -4,6 +4,11 @@
 make setup
 ```
 
+2. **Stop the container**
+```bash
+make down
+```
+
 ## Links
 - Frontend: http://localhost:5173
 - Backend: http://localhost:8080
@@ -15,22 +20,16 @@ make setup
 
 **Response:**
 ```json
-{
-  "list": [
+[
     {
-      "id": 1,
       "name": "Packgroup",
-      "slug": "packgroup",
-      "active": true
+      "slug": "packgroup"
     },
     {
-      "id": 2,
       "name": "Transcompany",
-      "slug": "transcompany",
-      "active": true
+      "slug": "transcompany"
     }
-  ]
-}
+]
 ```
 
 ### 2. Calculate
